@@ -1,0 +1,40 @@
+body {
+    font-family: 'Londrina Sketch', cursive;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#jogo {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.quadradinho {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-color: #c249a8a1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.flipped {
+    background-color: #a72881;
+}
+
+.matched {
+    background-color: #c0247f;
+}
+
+#timer {
+    font-size: 20px;
+    margin-top: 20px;
+}

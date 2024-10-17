@@ -1,40 +1,88 @@
+/* RESET global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+* {
+    margin: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0; 
+}
+
+
 body {
-    font-family: 'Londrina Sketch', cursive;
-    background-color: #f4f4f4;
-    text-align: center;
+    height: 700px;
+    font-family: 'Ysabeau Infant', sans-serif; /* Define a fonte*/
+    text-align: center; /* Centraliza o texto */
+    background-image: url('./assets/fundo_body.jpg'); /* Define uma imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center center; /* Centraliza a imagem de fundo */
 }
 
+/* Ajustes para o tabuleiro do jogo */
 #jogo {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
+    display: grid; /* Usa grid layout para organizar as cartas */
+    grid-template-columns: repeat(4, 100px); /* Define 4 colunas de 100px cada */
+    gap: 5px; /* Espaço entre as cartas */
+    align-items: center; /* Alinha as cartas verticalmente ao centro */
+    justify-content: center; /* Centraliza o tabuleiro horizontalmente */
+    margin: 20px auto; /* Adiciona margem superior e inferior, centralizando o tabuleiro */
 }
 
+/* Ajustes para cada carta */
 .quadradinho {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    background-color: #c249a8a1;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 8px;
+    width: 100px; /* Largura da carta */
+    height: 100px; /* Altura da carta */
+    background-size: cover; /* Faz a imagem de fundo da carta cobrir todo o elemento */
+    background-color: #fefefe77; /* Cor de fundo padrão das cartas */
+    display: flex; /* Centralizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    border-radius: 20px; /* Arredonda os cantos das cartas */
 }
 
+/* Ajustes para cartas viradas */
 .flipped {
-    background-color: #a72881;
+    background-color: #ae5fdb; /* Altera a cor de fundo quando a carta é virada */
 }
 
+/* Ajustes para cartas combinadas */
 .matched {
-    background-color: #c0247f;
+    background-color: #9330b1; /* Altera a cor de fundo para cartas que foram combinadas */
 }
 
+/* Ajustes do timer */
 #timer {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 30px; /* Tamanho da fonte do timer */
+    margin-top: 20px; /* Margem superior do timer */
+    color: white; /* Define a cor do texto */
+}
+
+/* Ajustes do titulo */
+h1 {
+    color: white; /* Define a cor do texto jogo da memória */
+    font-size: 50px;
+}
+
+#embaralhar {
+    background-color: #893bc9; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    font-family: 'Ysabeau Infant', sans-serif; /* Define a fonte*/
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda preta */
+    border-radius: 12px; /* Cantos arredondados */
+    
 }
